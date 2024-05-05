@@ -34,10 +34,11 @@ def count_logs_by_level(logs: list) -> dict:
     return counts
 
 def display_log_counts(counts: dict):
-    #Вивід результатів.
-    print("Статистика за рівнями логування:")
+    """Вивід результатів."""
+    print("Рівень логування  | Кількість")
+    print("------------------|----------")
     for level, count in counts.items():
-        print(f"{level}: {count}")
+        print(f"{level:<17} | {count:<10}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
